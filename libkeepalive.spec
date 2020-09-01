@@ -8,11 +8,10 @@ License:	MIT
 Source0:	https://cfhcable.dl.sourceforge.net/project/%{name}/%{name}/0.3/%{name}-0.3.tar.gz
 
 # All patches sent to the upstream maintainer directly via email.
-Patch1:		0001-Add-vim-modelines-to-source-files.patch
-Patch2:		0002-test-test.c-Whitespace-cleanup.patch
-Patch3:		0003-test-Implement-self-test-functionality.patch
-Patch4:		0004-Makefile-Make-self-test-accessible-by-make-test.patch
-Patch5:		0005-Makefile-Allow-setting-custom-compiler-flags.patch
+Patch1:		0002-test-test.c-Whitespace-cleanup.patch
+Patch2:		0003-test-Implement-self-test-functionality.patch
+Patch3:		0004-Makefile-Make-self-test-accessible-by-make-test.patch
+Patch4:		0005-Makefile-Allow-setting-custom-compiler-flags.patch
 %description
 libkeepalive is a library that enables tcp keepalive features in glibc based
 binary dynamic executables, without any change in the original program.
