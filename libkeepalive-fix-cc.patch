@@ -1,0 +1,23 @@
+--- a/src/Makefile	2023-04-19 17:12:46.708346940 +0800
++++ b/src/Makefile	2023-04-19 17:13:01.958325566 +0800
+@@ -7,7 +7,7 @@
+ #
+ #  (C) Fabio Busatto <fabio.busatto@gmail.com>
+ 
+-CC	:= gcc
++CC	?= gcc
+ CFLAGS	+= -fPIC -ansi -pedantic -Wall
+ LDFLAGS	+= -shared -Wl,-soname,libkeepalive.so
+ LDLIBS	+= -ldl
+
+--- a/test/Makefile	2023-04-19 17:15:39.061105398 +0800
++++ b/test/Makefile	2023-04-19 17:15:49.789090353 +0800
+@@ -7,7 +7,7 @@
+ #
+ #  (C) Fabio Busatto <fabio.busatto@gmail.com>
+ 
+-CC := gcc
++CC ?= gcc
+ 
+ default: test
+ 
