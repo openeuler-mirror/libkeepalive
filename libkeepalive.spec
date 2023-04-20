@@ -1,6 +1,6 @@
 Name:		libkeepalive
 Version:	0.3
-Release:	1
+Release:	2
 Summary:	Enable TCP keepalive in dynamic binaries
 URL:		http://libkeepalive.sourceforge.net/
 BuildRequires:  gcc
@@ -12,6 +12,7 @@ Patch1:		0002-test-test.c-Whitespace-cleanup.patch
 Patch2:		0003-test-Implement-self-test-functionality.patch
 Patch3:		0004-Makefile-Make-self-test-accessible-by-make-test.patch
 Patch4:		0005-Makefile-Allow-setting-custom-compiler-flags.patch
+Patch5:     libkeepalive-fix-cc.patch
 %description
 libkeepalive is a library that enables tcp keepalive features in glibc based
 binary dynamic executables, without any change in the original program.
@@ -36,5 +37,8 @@ install -p -m 0755 -D src/libkeepalive.so %{buildroot}%{_libdir}/libkeepalive.so
 %{_libdir}/libkeepalive.so
 
 %changelog
+* Wed Apr 19 2023 Xiaoya Huang <huangxiaoya@iscas.ac.cn> - 0.3-2
+- Fix CC compiler support
+
 * Thu Aug 13 2020 tuShenmei <tushenmei@huawei.com> - 0.3-1
 - package init
